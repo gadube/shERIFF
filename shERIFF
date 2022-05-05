@@ -1,0 +1,21 @@
+#!/bin/bash -e
+
+function prompt() {
+    unset PROMPT
+}
+
+exec 3<> $(realpath $1)
+
+while IFS= read -u3 -r line
+do
+    echo "$line"
+    unset PROMPT
+
+    read -p "Are you sure you want to do this?[y/n]" PROMPT
+    [ "$PROMPT" == "y" ] && {
+        echo $line >> .SHeriff_tmp_ahhhhhhh;
+    }
+done
+
+bash .SHeriff_tmp_ahhhhhhh
+rm .SHeriff_tmp_ahhhhhhh
