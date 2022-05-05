@@ -13,9 +13,9 @@ do
 
     read -p "Are you sure you want to do this?[y/n]" PROMPT
     [ "$PROMPT" == "y" ] && {
-        echo $line >> .SHeriff_tmp_ahhhhhhh;
+        echo $line >> .shERIFF_tmp_ahhhhhhh;
     }
 done
 
-bash .SHeriff_tmp_ahhhhhhh
-rm .SHeriff_tmp_ahhhhhhh
+bash .shERIFF_tmp_ahhhhhhh
+rm .shERIFF_tmp_ahhhhhhh
